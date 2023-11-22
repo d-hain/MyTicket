@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d66568ba-1a9a-46dc-8977-2730a24eac7c" name="Changes" comment="fix: removed unused import statements">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angabe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angabe.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/http-requests/http-client.env.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/http-requests/requests.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/MyTicketApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/controller/CartController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/controller/EventController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/CartAddTicketsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/CartCheckoutDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/CartResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/CategoryCreateDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/CategoryResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/CategoryUpdateDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/EventCreateDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/EventResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/EventUpdateDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/TicketAddDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/TicketResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/UserResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/UserSigninDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/UserSignupDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/dto/UserUpdateDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/model/Cart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/model/Event.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/model/Ticket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/permission/PermissionAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/permission/Permissions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/repository/CartRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/repository/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/repository/EventRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/repository/TicketRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/service/CartService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/service/EventService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/service/TicketService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dave/myticket/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/dave/myticket/MyTicketApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="WARN_ABOUT_CRLF" value="false" />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/requests-with-authorization.http" environment="test" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <hideBySeverity>
+      <option value="11" />
+      <option value="12" />
+      <option value="13" />
+      <option value="14" />
+      <option value="15" />
+      <option value="16" />
+      <option value="100" />
+      <option value="200" />
+      <option value="300" />
+    </hideBySeverity>
+    <option name="sortBySeverity" value="false" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2Y5bCSipRWcyXe9fYSNvIOFjeyV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/home/dhain/NAS-David/HTL/2023-2024/ITP/MyTicket/Backend/MyTicket",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "rest.client.default.execution.environment": "development",
+    "settings.editor.selected.configurable": "Errors",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\#NAS-David\HTL\2023-2024\ITP\MyTicket" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="me.dave.myticket" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MyTicketApplication">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http-requests/requests.http" index="10" requestIdentifier="#10" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests | #11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http-requests/requests.http" index="11" requestIdentifier="#11" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http-requests/requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http-requests/requests.http" index="5" requestIdentifier="#5" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http-requests/requests.http" index="7" requestIdentifier="#7" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="MyTicketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MyTicket" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="me.dave.myticket.MyTicketApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.requests | #7" />
+        <item itemvalue="HTTP Request.requests | #2" />
+        <item itemvalue="HTTP Request.requests | #10" />
+        <item itemvalue="HTTP Request.requests | #11" />
+        <item itemvalue="HTTP Request.requests | #5" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d66568ba-1a9a-46dc-8977-2730a24eac7c" name="Changes" comment="" />
+      <created>1699818262910</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699818262910</updated>
+      <workItem from="1699818263894" duration="68000" />
+      <workItem from="1699818380777" duration="2202000" />
+      <workItem from="1699821624020" duration="2057000" />
+      <workItem from="1699884636823" duration="59156000" />
+      <workItem from="1700085558209" duration="1965000" />
+      <workItem from="1700088193486" duration="4523000" />
+      <workItem from="1700514042217" duration="22703000" />
+      <workItem from="1700684380131" duration="8335000" />
+      <workItem from="1700695450947" duration="861000" />
+      <workItem from="1700696359220" duration="19000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: initial commit">
+      <option name="closed" value="true" />
+      <created>1699818421340</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699818421340</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: added all models (need to be checked if correct)">
+      <option name="closed" value="true" />
+      <created>1699823612336</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699823612336</updated>
+    </task>
+    <task id="LOCAL-00003" summary="docs: added TODO in `README.md`">
+      <option name="closed" value="true" />
+      <created>1699823678790</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699823678790</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix: fixed some things, added `application.yml`, removed OneToOne between User and Cart temporarily">
+      <option name="closed" value="true" />
+      <created>1699977204504</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699977204504</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix: fixed ManyToMany error and applications is starting now">
+      <option name="closed" value="true" />
+      <created>1699977936786</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699977936786</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: added repositories and DTOs for all models">
+      <option name="closed" value="true" />
+      <created>1699979193140</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699979193140</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: added services and controllers for category, event and user, not fully done and documented">
+      <option name="closed" value="true" />
+      <created>1699999092072</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699999092072</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: nothing works, added all DTOs, added all Endpoints according to spec, updated models, permissions not done in any way, services have nothing">
+      <option name="closed" value="true" />
+      <created>1700069034253</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700069034253</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: every endpoint should work except anything with /cart, still no auth">
+      <option name="closed" value="true" />
+      <created>1700076713829</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700076713829</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix: event sql error because of `from` field">
+      <option name="closed" value="true" />
+      <created>1700080308353</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700080308353</updated>
+    </task>
+    <task id="LOCAL-00011" summary="docs: documentation for user and event endpoints done">
+      <option name="closed" value="true" />
+      <created>1700080324987</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1700080324987</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix: actually save created/changed events">
+      <option name="closed" value="true" />
+      <created>1700085366924</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700085366924</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix: added jsonformat for event dates">
+      <option name="closed" value="true" />
+      <created>1700085508714</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700085508714</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: added all http requests for all currently working endpoints">
+      <option name="closed" value="true" />
+      <created>1700085532597</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700085532597</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix: added token expiration when signing up/in">
+      <option name="closed" value="true" />
+      <created>1700086480707</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700086480707</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix: yp error">
+      <option name="closed" value="true" />
+      <created>1700088668782</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700088668782</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: cart /add, /list and /checkout should be working now, also there are some fixes here and there">
+      <option name="closed" value="true" />
+      <created>1700604777003</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1700604777003</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix: removed unused map method">
+      <option name="closed" value="true" />
+      <created>1700606552704</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1700606552704</updated>
+    </task>
+    <task id="LOCAL-00019" summary="docs: added springdoc to /cart endpoints and the permissions annotation">
+      <option name="closed" value="true" />
+      <created>1700640864185</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1700640864185</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix: PermissionAspect always erroring">
+      <option name="closed" value="true" />
+      <created>1700641515869</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1700641515869</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat: checking permissions works">
+      <option name="closed" value="true" />
+      <created>1700693667943</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1700693667943</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat: updated `.gitignore`">
+      <option name="closed" value="true" />
+      <created>1700695066593</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1700695066593</updated>
+    </task>
+    <task id="LOCAL-00023" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1700695891901</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1700695891901</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix: removed unused import statements">
+      <option name="closed" value="true" />
+      <created>1700696026786</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1700696026787</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: initial commit" />
+    <MESSAGE value="feat: added all models (need to be checked if correct)" />
+    <MESSAGE value="docs: added TODO in `README.md`" />
+    <MESSAGE value="fix: fixed some things, added `application.yml`, removed OneToOne between User and Cart temporarily" />
+    <MESSAGE value="fix: fixed ManyToMany error and applications is starting now" />
+    <MESSAGE value="feat: added repositories and DTOs for all models" />
+    <MESSAGE value="feat: added services and controllers for category, event and user, not fully done and documented" />
+    <MESSAGE value="feat: nothing works, added all DTOs, added all Endpoints according to spec, updated models, permissions not done in any way, services have nothing" />
+    <MESSAGE value="feat: every endpoint should work except anything with /cart, still no auth" />
+    <MESSAGE value="fix: event sql error because of `from` field" />
+    <MESSAGE value="docs: documentation for user and event endpoints done" />
+    <MESSAGE value="fix: actually save created/changed events" />
+    <MESSAGE value="fix: added jsonformat for event dates" />
+    <MESSAGE value="feat: added all http requests for all currently working endpoints" />
+    <MESSAGE value="fix: added token expiration when signing up/in" />
+    <MESSAGE value="fix: yp error" />
+    <MESSAGE value="feat: cart /add, /list and /checkout should be working now, also there are some fixes here and there" />
+    <MESSAGE value="fix: removed unused map method" />
+    <MESSAGE value="docs: added springdoc to /cart endpoints and the permissions annotation" />
+    <MESSAGE value="fix: PermissionAspect always erroring" />
+    <MESSAGE value="feat: checking permissions works" />
+    <MESSAGE value="feat: updated `.gitignore`" />
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="fix: removed unused import statements" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: removed unused import statements" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.AnnotationException" package="org.hibernate" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="me.dave.myticket.model.Cart" memberName="id" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>
