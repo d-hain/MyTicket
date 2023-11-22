@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        # Debugging SQL from Repositories
+        format_sql: true
+    # Debugging SQL from Repositories
+      show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:4306/myticket
+    username: my
+    password: ticket
+
+server:
+  servlet:
+    context-path: /api/v1

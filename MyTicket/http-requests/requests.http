@@ -1,0 +1,179 @@
+# Guest Endpoints
+
+### POST /api/v1/user/signup
+POST {{host}}/api/v1/user/signup
+Content-Type: application/json
+
+{
+  "email": "example@example.com",
+  "password": "password",
+  "firstname": "Ruffy",
+  "lastname": "D. Monkey"
+}
+###
+
+### POST /api/v1/user/signin
+POST {{host}}/api/v1/user/signin
+Content-Type: application/json
+
+{
+  "email": "a",
+  "password": "a"
+}
+
+> {%
+    client.global.set("token", response.headers.valueOf("Authorization"));
+%}
+###
+
+
+
+# Admin Endpoints
+
+### PUT /api/v1/user/update
+PUT {{host}}/api/v1/user/update
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "id": 1,
+  "firstname": "Luffy",
+  "lastname": "D. Monkey",
+  "email": "example@example.com"
+}
+###
+
+### DELETE /api/v1/user/delete/1
+DELETE {{host}}/api/v1/user/delete/1
+Authorization: {{token}}
+Accept: application/json
+###
+
+### GET /api/v1/user/list
+GET {{host}}/api/v1/user/list
+Authorization: {{token}}
+Accept: application/json
+###
+
+### GET /api/v1/user/load/1
+GET {{host}}/api/v1/user/load/1
+Authorization: {{token}}
+Accept: application/json
+###
+
+### POST /api/v1/event/create
+POST {{host}}/api/v1/event/create
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "name": "Maturaball HTL Steyr 2024",
+  "from": "02.03.2024 20:00",
+  "to": "03.03.2024 05:00",
+  "description": "Maturaball der Abteilungen EL, IT, ME, Y",
+  "ticketCategories": [
+    {
+      "name": "A",
+      "price": 25,
+      "stock": 500
+    },
+    {
+      "name": "B",
+      "price": 22,
+      "stock": 500
+    },
+    {
+      "name": "C",
+      "price": 18,
+      "stock": 300
+    }
+  ]
+}
+###
+
+### PUT /api/v1/event/update
+PUT {{host}}/api/v1/event/update
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Maturaball HTL Steyr 2024",
+  "from": "02.03.2024 19:00",
+  "to": "03.03.2024 05:00",
+  "description": "Bester Ball der HTL Steyr",
+  "ticketCategories": [
+    {
+      "id": 1,
+      "name": "A",
+      "price": 26,
+      "stock": 550
+    },
+    {
+      "id": 2,
+      "name": "B",
+      "price": 22,
+      "stock": 500
+    },
+    {
+      "id": 3,
+      "name": "C",
+      "price": 18,
+      "stock": 300
+    }
+  ]
+}
+###
+
+### DELETE /api/v1/event/1
+DELETE {{host}}/api/v1/event/1
+Authorization: {{token}}
+###
+
+
+
+# User Endpoints
+
+### GET /api/v1/event/1
+GET {{host}}/api/v1/event/1
+Authorization: {{token}}
+Accept: application/json
+###
+
+### GET /api/v1/event/list
+GET {{host}}/api/v1/event/list
+Authorization: {{token}}
+Accept: application/json
+###
+
+### POST /api/v1/cart/add
+POST {{host}}/api/v1/cart/add
+Authorization: Bearer a
+Content-Type: application/json
+
+{
+  "id": 1,
+  "tickets": [
+    {
+      "id": 1,
+      "amount": 2
+    },
+    {
+      "id": 2,
+      "amount": 1
+    }
+  ]
+}
+###
+
+### GET /api/v1/cart/list
+GET {{host}}/api/v1/cart/list
+Authorization: Bearer a
+Accept: application/json
+###
+
+### POST /api/v1/cart/checkout
+POST {{host}}/api/v1/cart/checkout
+Authorization: Bearer a
+Accept: application/json
+###
