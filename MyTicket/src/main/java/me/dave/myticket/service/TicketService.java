@@ -1,7 +1,5 @@
 package me.dave.myticket.service;
 
-import me.dave.myticket.dto.TicketResponseDto;
-import me.dave.myticket.model.Category;
 import me.dave.myticket.model.Ticket;
 import me.dave.myticket.repository.TicketRepository;
 import org.springframework.stereotype.Service;

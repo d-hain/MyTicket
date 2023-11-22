@@ -6,7 +6,6 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import me.dave.myticket.dto.UserSigninDto;
 import me.dave.myticket.dto.UserSignupDto;
 import me.dave.myticket.dto.UserResponseDto;
