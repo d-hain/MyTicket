@@ -7,9 +7,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "user")
-@Getter
-@Setter
-@RequiredArgsConstructor
+@Data
 @NoArgsConstructor
 public class User {
     @Id

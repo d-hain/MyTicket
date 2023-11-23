@@ -7,9 +7,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "cart")
-@Getter
-@Setter
-@RequiredArgsConstructor
+@Data
 public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
