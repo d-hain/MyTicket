@@ -46,7 +46,6 @@ public class UserController {
     @PostMapping("/signup")
     @Permissions(user = true, guest = true)
     public ResponseEntity<Void> signupUser(
-        @RequestHeader("Authorization") String bearerToken,
         @RequestBody UserSignupDto user
     ) {
         String token = service.signup(user);
@@ -79,7 +78,6 @@ public class UserController {
     @PostMapping("/signin")
     @Permissions(user = true, guest = true)
     public ResponseEntity<Void> signinUser(
-        @RequestHeader("Authorization") String bearerToken,
         @RequestBody UserSigninDto user
     ) {
         String token = service.signin(user);
@@ -112,7 +110,6 @@ public class UserController {
     @PutMapping("/update")
     @Permissions(user = false)
     public ResponseEntity<Void> updateUser(
-        @RequestHeader("Authorization") String bearerToken,
         @RequestBody UserUpdateDto user
     ) {
         if (service.update(user)) {
@@ -139,7 +136,6 @@ public class UserController {
     @DeleteMapping("/delete/{id}")
     @Permissions(user = false)
     public ResponseEntity<Void> deleteUser(
-        @RequestHeader("Authorization") String bearerToken,
         @PathVariable Long id
     ) {
         if (service.delete(id)) {
@@ -168,9 +164,7 @@ public class UserController {
     })
     @GetMapping("/list")
     @Permissions(user = false)
-    public ResponseEntity<List<UserResponseDto>> listUsers(
-        @RequestHeader("Authorization") String bearerToken
-    ){
+    public ResponseEntity<List<UserResponseDto>> listUsers(){
         List<UserResponseDto> users = service.list();
         if (users != null) {
             return new ResponseEntity<>(users, HttpStatus.OK);
@@ -199,7 +193,6 @@ public class UserController {
     @GetMapping("/load/{id}")
     @Permissions(user = false)
     public ResponseEntity<UserResponseDto> listUser(
-        @RequestHeader("Authorization") String bearerToken,
         @PathVariable Long id
     ) {
         UserResponseDto user = service.load(id);

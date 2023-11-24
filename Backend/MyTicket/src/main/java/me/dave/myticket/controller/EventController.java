@@ -44,7 +44,6 @@ public class EventController {
     @PostMapping("/create")
     @Permissions(user = false)
     public ResponseEntity<Void> createEvent(
-        @RequestHeader("Authorization") String bearerToken,
         @RequestBody EventCreateDto event
     ) {
         if (service.create(event)) {
@@ -71,7 +70,6 @@ public class EventController {
     @PutMapping("/update")
     @Permissions(user = false)
     public ResponseEntity<Void> updateEvent(
-        @RequestHeader("Authorization") String bearerToken,
         @RequestBody EventUpdateDto event
     ) {
         if (service.update(event)) {
@@ -98,7 +96,6 @@ public class EventController {
     @DeleteMapping("/{id}")
     @Permissions(user = false)
     public ResponseEntity<Void> deleteEvent(
-        @RequestHeader("Authorization") String bearerToken,
         @PathVariable Long id
     ) {
         if (service.delete(id)) {
@@ -128,7 +125,6 @@ public class EventController {
     @GetMapping("/{id}")
     @Permissions(user = true)
     public ResponseEntity<EventResponseDto> loadEvent(
-        @RequestHeader("Authorization") String bearerToken,
         @PathVariable Long id
     ) {
         EventResponseDto event = service.load(id);
@@ -158,9 +154,7 @@ public class EventController {
     })
     @GetMapping("/list")
     @Permissions(user = true)
-    public ResponseEntity<List<EventResponseDto>> listEvents(
-        @RequestHeader("Authorization") String bearerToken
-    ){
+    public ResponseEntity<List<EventResponseDto>> listEvents(){
         List<EventResponseDto> events = service.list();
         if (events != null) {
             return new ResponseEntity<>(events, HttpStatus.OK);
