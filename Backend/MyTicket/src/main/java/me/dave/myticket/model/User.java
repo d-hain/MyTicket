@@ -35,6 +35,10 @@ public class User {
     @Column(name = "token_expiration")
     private Date tokenExpiration;
     
+    @Enumerated
+    @NonNull
+    private Role role = Role.USER;
+    
     @OneToOne
     private Cart cart;
 }

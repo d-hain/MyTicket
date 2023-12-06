@@ -6,11 +6,11 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import org.dave.Permissions;
 import me.dave.myticket.dto.UserSigninDto;
 import me.dave.myticket.dto.UserSignupDto;
 import me.dave.myticket.dto.UserResponseDto;
 import me.dave.myticket.dto.UserUpdateDto;
-import me.dave.myticket.permission.Permissions;
 import me.dave.myticket.service.UserService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -31,7 +31,7 @@ public class UserController {
     @Operation(
         summary = "Sign up a new user",
         description = "This can be done by everyone including guests",
-        tags = { "user", "signup" }
+        tags = {"user", "signup"}
     )
     @ApiResponses(value = {
         @ApiResponse(
@@ -52,7 +52,7 @@ public class UserController {
         if (token != null) {
             HttpHeaders headers = new HttpHeaders();
             headers.set("Authorization", "Bearer " + token);
-            
+
             return ResponseEntity.status(HttpStatus.CREATED)
                 .headers(headers)
                 .build();
@@ -63,7 +63,7 @@ public class UserController {
     @Operation(
         summary = "Sign in a user",
         description = "This can be done by everyone including guests",
-        tags = { "user", "signin", "login" }
+        tags = {"user", "signin", "login"}
     )
     @ApiResponses(value = {
         @ApiResponse(
@@ -95,7 +95,7 @@ public class UserController {
     @Operation(
         summary = "Update an existing user",
         description = "This can only be done by an admin",
-        tags = { "user", "update" }
+        tags = {"user", "update"}
     )
     @ApiResponses(value = {
         @ApiResponse(
@@ -121,7 +121,7 @@ public class UserController {
     @Operation(
         summary = "Delete a user",
         description = "This can only be done by an admin",
-        tags = { "user", "delete" }
+        tags = {"user", "delete"}
     )
     @ApiResponses(value = {
         @ApiResponse(
@@ -147,7 +147,7 @@ public class UserController {
     @Operation(
         summary = "List all users",
         description = "This can only be done by an admin",
-        tags = { "user", "list" }
+        tags = {"user", "list"}
     )
     @ApiResponses(value = {
         @ApiResponse(
@@ -164,7 +164,7 @@ public class UserController {
     })
     @GetMapping("/list")
     @Permissions(user = false)
-    public ResponseEntity<List<UserResponseDto>> listUsers(){
+    public ResponseEntity<List<UserResponseDto>> listUsers() {
         List<UserResponseDto> users = service.list();
         if (users != null) {
             return new ResponseEntity<>(users, HttpStatus.OK);
@@ -175,7 +175,7 @@ public class UserController {
     @Operation(
         summary = "Load a specific user",
         description = "This can only be done by an admin",
-        tags = { "user", "load" }
+        tags = {"user", "load"}
     )
     @ApiResponses(value = {
         @ApiResponse(

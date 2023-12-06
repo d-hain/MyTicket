@@ -4,14 +4,12 @@ import me.dave.myticket.dto.UserResponseDto;
 import me.dave.myticket.dto.UserSigninDto;
 import me.dave.myticket.dto.UserSignupDto;
 import me.dave.myticket.dto.UserUpdateDto;
+import me.dave.myticket.model.Role;
 import me.dave.myticket.model.User;
 import me.dave.myticket.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 public class UserService {
@@ -41,19 +39,19 @@ public class UserService {
     /**
      * @param bearerToken The users token with the "Bearer " prefix
      */
-    public boolean isValidToken(String bearerToken) {
+    public boolean isValidToken(String bearerToken, Role role) {
         if (bearerToken == null || bearerToken.isEmpty()) {
             return false;
         }
         String token = bearerToken.split(" ")[1];
+
+        Optional<User> user = repository.findUserByTokenAndTokenExpirationIsBeforeAndRole(
+            token,
+            new Date(),
+            role
+        );
         
-        User user = repository.findByToken(token).orElse(null);
-        if (user == null) {
-            return false;
-        }
-        
-        Date now = new Date();
-        return !user.getTokenExpiration().before(now);
+        return user.isPresent();
     }
     
     public User save(User user) {
