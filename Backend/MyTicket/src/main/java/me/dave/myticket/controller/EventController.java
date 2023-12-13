@@ -9,7 +9,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import me.dave.myticket.dto.EventCreateDto;
 import me.dave.myticket.dto.EventResponseDto;
 import me.dave.myticket.dto.EventUpdateDto;
-import me.dave.myticket.permission.Permissions;
+import org.dave.Permissions;
 import me.dave.myticket.service.EventService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,11 +25,11 @@ public class EventController {
     public EventController(EventService service) {
         this.service = service;
     }
-    
+
     @Operation(
         summary = "Create a new event",
         description = "This can only be done by an admin",
-        tags = { "event", "create" }
+        tags = {"event", "create"}
     )
     @ApiResponses(value = {
         @ApiResponse(
@@ -55,7 +55,7 @@ public class EventController {
     @Operation(
         summary = "Update an event",
         description = "This can only be done by an admin",
-        tags = { "event", "update" }
+        tags = {"event", "update"}
     )
     @ApiResponses(value = {
         @ApiResponse(
@@ -81,7 +81,7 @@ public class EventController {
     @Operation(
         summary = "Delete an event",
         description = "This can only be done by an admin",
-        tags = { "event", "delete" }
+        tags = {"event", "delete"}
     )
     @ApiResponses(value = {
         @ApiResponse(
@@ -107,7 +107,7 @@ public class EventController {
     @Operation(
         summary = "Load an event",
         description = "This can be done by everyone excluding guests",
-        tags = { "event", "load" }
+        tags = {"event", "load"}
     )
     @ApiResponses(value = {
         @ApiResponse(
@@ -137,7 +137,7 @@ public class EventController {
     @Operation(
         summary = "List all events",
         description = "This can be done by everyone excluding guests",
-        tags = { "event", "list" }
+        tags = {"event", "list"}
     )
     @ApiResponses(value = {
         @ApiResponse(
@@ -154,7 +154,7 @@ public class EventController {
     })
     @GetMapping("/list")
     @Permissions(user = true)
-    public ResponseEntity<List<EventResponseDto>> listEvents(){
+    public ResponseEntity<List<EventResponseDto>> listEvents() {
         List<EventResponseDto> events = service.list();
         if (events != null) {
             return new ResponseEntity<>(events, HttpStatus.OK);
