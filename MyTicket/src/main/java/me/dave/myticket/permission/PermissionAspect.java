@@ -1,7 +1,6 @@
 package me.dave.myticket.permission;
 
 import jakarta.servlet.http.HttpServletRequest;
-import org.dave.Permissions;
 import me.dave.myticket.model.Role;
 import me.dave.myticket.service.UserService;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -27,7 +26,7 @@ public class PermissionAspect {
         this.userService = userService;
     }
 
-    @Around("@annotation(org.dave.Permissions)")
+    @Around("@annotation(me.dave.myticket.permission.Permissions)")
     public ResponseEntity<?> checkPermissions(ProceedingJoinPoint joinPoint) throws Throwable {
         fullMethodName = joinPoint.getSignature().getDeclaringType() + "." + joinPoint.getSignature().getName();
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
@@ -82,7 +81,7 @@ public class PermissionAspect {
         HttpServletRequest request =
             ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest();
 
-        return request.getHeader("Authorization").replace("Bearer ", "");
+        return request.getHeader("Authorization");
     }
 
     private void printTokenEmptyError(String atPermission) {

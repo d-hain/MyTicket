@@ -6,7 +6,7 @@ Content-Type: application/json
 
 {
   "email": "example@example.com",
-  "password": "password",
+  "password": "DefinitelyIsNotTheRulerOfTheWorld777666",
   "firstname": "Ruffy",
   "lastname": "D. Monkey"
 }
@@ -17,8 +17,8 @@ POST {{host}}/api/v1/user/signin
 Content-Type: application/json
 
 {
-  "email": "a",
-  "password": "a"
+  "email": "example@example.com",
+  "password": "DefinitelyIsNotTheRulerOfTheWorld777666"
 }
 
 > {%
@@ -32,7 +32,7 @@ Content-Type: application/json
 
 ### PUT /api/v1/user/update
 PUT {{host}}/api/v1/user/update
-Authorization: {{token}}
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
@@ -45,25 +45,25 @@ Content-Type: application/json
 
 ### DELETE /api/v1/user/delete/1
 DELETE {{host}}/api/v1/user/delete/1
-Authorization: {{token}}
+Authorization: Bearer {{token}}
 Accept: application/json
 ###
 
 ### GET /api/v1/user/list
 GET {{host}}/api/v1/user/list
-Authorization: {{token}}
+Authorization: Bearer {{token}}
 Accept: application/json
 ###
 
 ### GET /api/v1/user/load/1
 GET {{host}}/api/v1/user/load/1
-Authorization: {{token}}
+Authorization: Bearer {{token}}
 Accept: application/json
 ###
 
 ### POST /api/v1/event/create
 POST {{host}}/api/v1/event/create
-Authorization: {{token}}
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
@@ -93,7 +93,7 @@ Content-Type: application/json
 
 ### PUT /api/v1/event/update
 PUT {{host}}/api/v1/event/update
-Authorization: {{token}}
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
@@ -127,7 +127,7 @@ Content-Type: application/json
 
 ### DELETE /api/v1/event/1
 DELETE {{host}}/api/v1/event/1
-Authorization: {{token}}
+Authorization: Bearer {{token}}
 ###
 
 
@@ -136,13 +136,13 @@ Authorization: {{token}}
 
 ### GET /api/v1/event/1
 GET {{host}}/api/v1/event/1
-Authorization: {{token}}
+Authorization: Bearer {{token}}
 Accept: application/json
 ###
 
 ### GET /api/v1/event/list
 GET {{host}}/api/v1/event/list
-Authorization: {{token}}
+Authorization: Bearer {{token}}
 Accept: application/json
 ###
 

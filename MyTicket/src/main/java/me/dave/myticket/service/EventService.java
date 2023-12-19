@@ -7,6 +7,7 @@ import me.dave.myticket.repository.EventRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -92,8 +93,8 @@ public class EventService {
         return repository.findById(id).map(EventService::map).orElse(null);
     }
     
-    public List<EventResponseDto> list() {
-        return repository.findAll().stream().map(EventService::map).toList();
+    public List<EventResponseDto> listFutureEvents() {
+        return repository.findEventsByFromAfter(new Date()).stream().map(EventService::map).toList();
     }
 
     public boolean delete(Long id) {

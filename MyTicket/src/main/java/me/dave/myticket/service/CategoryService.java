@@ -55,6 +55,19 @@ public class CategoryService {
             in.getStock()
         );
     }
+
+    public static CategoryUpdateDto map(CategoryResponseDto in) {
+        if (in == null) {
+            return null;
+        }
+
+        return new CategoryUpdateDto(
+            in.id(),
+            in.name(),
+            in.price(),
+            in.stock()
+        );
+    }
     
     public Category save(Category category) {
         return repository.save(category);

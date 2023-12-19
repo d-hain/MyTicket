@@ -7,12 +7,18 @@ import me.dave.myticket.dto.UserUpdateDto;
 import me.dave.myticket.model.Role;
 import me.dave.myticket.model.User;
 import me.dave.myticket.repository.UserRepository;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
+    private final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
     private final UserRepository repository;
 
     public UserService(UserRepository repository) {
@@ -32,8 +38,12 @@ public class UserService {
         );
     }
 
-    private String generateToken() {
-        return UUID.randomUUID().toString();
+    private String generateToken(String userEmail) {
+        return passwordEncoder.encode(userEmail);
+    }
+
+    public String encodePassword(String password) {
+        return passwordEncoder.encode(password);
     }
     
     /**
@@ -43,6 +53,7 @@ public class UserService {
         if (bearerToken == null || bearerToken.isEmpty()) {
             return false;
         }
+        System.err.println(bearerToken);
         String token = bearerToken.split(" ")[1];
 
         Optional<User> user = repository.findUserByTokenAndTokenExpirationIsBeforeAndRole(
@@ -75,9 +86,9 @@ public class UserService {
         newUser.setEmail(user.email());
         newUser.setFirstname(user.firstname());
         newUser.setLastname(user.lastname());
-        newUser.setPassword(user.password());
+        newUser.setPassword(this.encodePassword(user.password()));
 
-        String token = generateToken();
+        String token = generateToken(newUser.getEmail());
         newUser.setToken(token);
 
         // Token expiration is 10 minutes
@@ -95,18 +106,20 @@ public class UserService {
     /**
      * @return Bearer token if successful, null if failed
      */
-    public String signin(UserSigninDto signinDetails) {
-        User user = repository.findByEmail(signinDetails.email()).orElse(null);
+    public String signin(UserSigninDto signinDto) {
+        Optional<User> result = repository.findByEmail(signinDto.email());
         // User does not exist
-        if (user == null) {
+        if (result.isEmpty()) {
             return null;
         }
-        // Password does not match        
-        if (!user.getPassword().equals(signinDetails.password())) {
+        User user = result.get();
+        
+        // Passwords do not match
+        if (passwordEncoder.matches(user.getPassword(), signinDto.password())) {
             return null;
         }
 
-        String token = generateToken();
+        String token = generateToken(user.getEmail());
         user.setToken(token);
 
         // Token expiration is 10 minutes

@@ -1,4 +1,4 @@
-package org.dave;
+package me.dave.myticket.permission;
 
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;

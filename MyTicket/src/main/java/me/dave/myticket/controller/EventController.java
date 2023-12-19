@@ -9,8 +9,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import me.dave.myticket.dto.EventCreateDto;
 import me.dave.myticket.dto.EventResponseDto;
 import me.dave.myticket.dto.EventUpdateDto;
-import org.dave.Permissions;
 import me.dave.myticket.service.EventService;
+import me.dave.myticket.permission.Permissions;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -154,8 +154,8 @@ public class EventController {
     })
     @GetMapping("/list")
     @Permissions(user = true)
-    public ResponseEntity<List<EventResponseDto>> listEvents() {
-        List<EventResponseDto> events = service.list();
+    public ResponseEntity<List<EventResponseDto>> listFutureEvents() {
+        List<EventResponseDto> events = service.listFutureEvents();
         if (events != null) {
             return new ResponseEntity<>(events, HttpStatus.OK);
         }

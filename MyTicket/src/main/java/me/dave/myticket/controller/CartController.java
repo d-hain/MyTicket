@@ -9,7 +9,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import me.dave.myticket.dto.CartAddTicketsDto;
 import me.dave.myticket.dto.CartCheckoutDto;
 import me.dave.myticket.dto.CartResponseDto;
-import org.dave.Permissions;
+import me.dave.myticket.permission.Permissions;
 import me.dave.myticket.service.CartService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

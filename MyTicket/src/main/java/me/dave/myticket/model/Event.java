@@ -10,7 +10,9 @@ import java.util.List;
 @Entity
 @Table(name = "event")
 @Data
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -8,7 +8,9 @@ import java.util.List;
 @Entity
 @Table(name = "ticket")
 @Data
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
