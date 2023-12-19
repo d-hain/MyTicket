@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  database:
+    container_name: database_myticket_test
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password --log_bin_trust_function_creators=1
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpwd
+      MYSQL_DATABASE: myticket_test
+      MYSQL_USER: myticket
+      MYSQL_PASSWORD: test
+    ports:
+      - '5306:3306'
+    volumes:
+      - ./mysql:/var/lib/mysql
