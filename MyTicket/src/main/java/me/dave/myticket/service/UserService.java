@@ -98,6 +98,7 @@ public class UserService {
         Date expiration = cal.getTime();
         newUser.setTokenExpiration(expiration);
 
+        // ts-ignore
         repository.save(newUser);
 
         return token;

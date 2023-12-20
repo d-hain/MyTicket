@@ -47,7 +47,7 @@ public class CartController {
         @RequestHeader("Authorization") String bearerToken,
         @RequestBody CartAddTicketsDto cartAddTickets
     ) {
-        if (service.addTickets(bearerToken, cartAddTickets)) {
+        if (service.addTickets(bearerToken.replace("Bearer ", ""), cartAddTickets)) {
             return new ResponseEntity<>(HttpStatus.CREATED);
         }
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);

@@ -28,14 +28,13 @@ public class CartService {
     }
 
     /**
-     * @param bearerToken The users token with the "Bearer " prefix
+     * @param token The users token without the "Bearer " prefix
      */
-    public boolean addTickets(String bearerToken, CartAddTicketsDto ticketDtos) {
-        if (bearerToken == null || bearerToken.isEmpty() || ticketDtos == null) {
+    public boolean addTickets(String token, CartAddTicketsDto ticketDtos) {
+        if (token == null || token.isEmpty() || ticketDtos == null) {
             return false;
         }
 
-        String token = bearerToken.split(" ")[1];
         User user = userService.getByToken(token);
         if (user == null) {
             return false;

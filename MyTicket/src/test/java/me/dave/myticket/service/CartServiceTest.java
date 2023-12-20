@@ -23,20 +23,19 @@ public class CartServiceTest {
     @Autowired
     private UserService userService;
     
-    private final Util util;
-
-    public CartServiceTest() {
-        util = new Util(service, userService);
-    }
     
     @Test
     void testAddTickets() {
+        Util util = new Util(service, userService);
+        
         assert util.addTickets();
         assert repository.getReferenceById(1L).getTickets().size() == 3;
     }
 
     @Test
     void list() {
+        Util util = new Util(service, userService);
+        
         util.addTickets();
         String bearerToken = util.signin();
 
@@ -48,6 +47,8 @@ public class CartServiceTest {
 
     @Test
     void checkout() {
+        Util util = new Util(service, userService);
+        
         util.addTickets();
         String bearerToken = util.signin();
 

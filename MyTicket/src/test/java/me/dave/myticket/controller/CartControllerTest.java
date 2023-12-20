@@ -26,12 +26,6 @@ public class CartControllerTest {
     @MockBean
     private CartService service;
 
-    private final Util util;
-    
-    public CartControllerTest() {
-        util = new Util(service, userService);
-    }
-    
     @Test
     void addTicketsToCart() throws Exception {
         mockMvc.perform(
@@ -69,6 +63,7 @@ public class CartControllerTest {
     
     @Test
     void checkoutCart() throws Exception {
+        Util util = new Util(service, userService);
         util.addTickets();       
         
         mockMvc.perform(

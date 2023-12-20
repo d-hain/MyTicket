@@ -17,7 +17,7 @@ public class WebSecurityConfig {
                 (requests) -> requests
                     .anyRequest().permitAll()
             ).csrf(AbstractHttpConfigurer::disable);
-       
+      
         return http.build();
     }
 }
